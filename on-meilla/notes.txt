@@ -1,0 +1,20 @@
+raw.txt has 33 pages of Black Friday tat from a webshop.
+
+Find the, for example,  -älykello (smartwatch), -kaasugrilli (gas grill),
+-televisio (television) and -minikopteri (minicopter) in:
+
+Xiaomi Amazfit Stratos -älykello, musta
+Weber Genesis II LX S-340 GBS -kaasugrilli, rosteri
+ProCaster 43UNB820H 43" 4K Ultra HD Smart LED -televisio
+Ryze Tello, powered by DJI -minikopteri, valkoinen
+
+and cut the initial dash, and sort and remove duplicates:
+
+grep -o "\-[a-zäö]\+" raw.txt | cut -c 2- | sort | uniq > stuff.txt
+
+# TODO remove päätarjoukset tarjouslehdestä? Other false positives?
+
+print the intro.txt, and then generate this until 50k words:
+
+On meillä A, B, C ja D
+On E, F, G ja H
